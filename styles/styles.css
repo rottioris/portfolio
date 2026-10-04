@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", monospace;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.terminal {
+  background-color: #32344a;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 8px;
+  border: 2px solid #44475a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+
+.terminal-header {
+  background-color: #44475a;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #282a36;
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.close {
+  background-color: #ff5f57;
+}
+
+.minimize {
+  background-color: #ffbd2e;
+}
+
+.maximize {
+  background-color: #28c940;
+}
+
+.title {
+  color: #cdd6f4;
+  font-size: 0.9em;
+  font-family: "Courier New", monospace;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 2px dashed #282a36;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #f5c2e7;
+  image-rendering: pixelated;
+  filter: grayscale(60%);
+  transition: filter 0.3s ease;
+}
+
+.profile-pic:hover {
+  filter: grayscale(0%);
+}
+
+.text-content {
+  max-width: 500px;
+}
+
+header .command {
+  color: #f5c2e7;
+  font-size: 2em;
+  animation: typing 2s steps(20, end), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #f5c2e7;
+  display: inline-block;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+header .intro {
+  color: #cdd6f4;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.about {
+  text-align: center;
+  margin-top: 20px;
+  padding: 0 20px;
+  color: #cdd6f4;
+}
+
+.about h2,
+.tech-stack h2 {
+  color: #a6e3a1;
+  margin-bottom: 10px;
+}
+
+.tech-stack {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  color: #cdd6f4;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  padding: 4px 10px;
+  border: 1px solid #44475a;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tech-tag:hover {
+  color: #f5c2e7;
+  border-color: #f5c2e7;
+  transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid #f5c2e7;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
